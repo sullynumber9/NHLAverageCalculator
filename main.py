@@ -94,7 +94,7 @@ for subList in masterList:
 print(masterList)
 
 # sorting the list by the highest number of appearances, then the lowest average ranking
-masterList.sort(key=lambda x: (-x[1], x[3]))
+masterList.sort(key=lambda x: (-x[1], x[3], -max(x[2])))
 
 for i in range(len(masterList)):
     print("Player " + str(i+1) + ": " + str(masterList[i][0]) + " | Appearances: " + str(masterList[i][1]) + " | Rankings: " + str(masterList[i][2]) + " | Average: " + str(masterList[i][3]))
